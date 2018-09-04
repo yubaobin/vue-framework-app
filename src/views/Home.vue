@@ -1,18 +1,16 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <mt-header title="标题"></mt-header>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import qrcode from '@/components/qrcode'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    qrcode
   }
 }
 </script>
