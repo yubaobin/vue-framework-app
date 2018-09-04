@@ -10,12 +10,20 @@ import 'mint-ui/lib/style.css'
 // 引入移动端适配
 import 'lib-flexible/flexible.js'
 
+// filter
+import filter from './filter'
+// mixins
+import mixins from './mixins'
+
 Vue.config.productionTip = false
 
 // 引入Mint ui
 Vue.use(Mint)
 // api
 Vue.use(api)
+
+filter.init()
+mixins.init()
 
 new Vue({
   router,

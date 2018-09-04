@@ -1,16 +1,23 @@
 <template>
   <div class="home">
-    <mt-header title="标题"></mt-header>
+    <img src="@/assets/logo.png" />
+    <div class="list">
+      <mt-cell title="表情包" to="/emoji" is-link></mt-cell>
+      <mt-cell title="二维码" to="/qrcode" is-link></mt-cell>
+    </div>
   </div>
 </template>
 
 <script>
-import qrcode from '@/components/qrcode'
-
 export default {
-  name: 'home',
-  components: {
-    qrcode
-  }
+  name: 'home'
 }
 </script>
+<style scoped lang="less">
+  .home {
+    text-align: center;
+  }
+  .list {
+    text-align: left;
+  }
+</style>

@@ -6,6 +6,7 @@ import config from '@/config'
 import qs from 'qs'
 const env = process.env.NODE_ENV || 'development'
 
+/* eslint-disable prefer-promise-reject-errors */
 let instance = axios.create({
   method: 'post',
   withCredentials: true,

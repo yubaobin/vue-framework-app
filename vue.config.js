@@ -3,6 +3,16 @@ function resolve (dir) {
   return path.join(__dirname, '', dir)
 }
 
+function addStyleResource (rule) {
+  rule.use('style-resource')
+  .loader('style-resources-loader')
+  .options({
+    patterns: [
+      resolve('./src/styles/variables.less'),
+    ],
+  })
+}
+
 module.exports = {
   baseUrl: '/', // 项目的根路径, 默认: '/' 这个值也可以被设置为空字符串 ('') 或是相对路径 ('./')，这样所有的资源都会被链接为相对路径
   outputDir: 'dist', // 生成的生产环境构建文件的目录
@@ -32,6 +42,8 @@ module.exports = {
   },
   chainWebpack: (config) => {
     config.resolve.alias.set('styles', resolve('src/styles'))
+
+    // svg
     config.module.rule('svg').exclude.add(resolve('src/assets/svg'))
     config.module
       .rule('inline-svg')
@@ -42,5 +54,10 @@ module.exports = {
       .end()
       .use('svg-inline-loader')
       .loader('svg-inline-loader')
+
+    // less
+    const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+    types.forEach(type => addStyleResource(config.module.rule('less').oneOf(type)))
   }
 }
+
