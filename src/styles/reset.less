@@ -6,3 +6,16 @@
         vertical-align: middle;
     }
 }
+
+.mint-indicator {
+    position: absolute;
+    z-index: 99;
+    .mint-indicator-wrapper {
+        z-index: 999;
+    }
+    .mint-indicator-mask {
+        z-index: 998;
+        opacity: 1;
+        background-color: fade(#000, 50);
+    }
+}

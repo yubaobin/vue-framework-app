@@ -1,13 +1,20 @@
 <template>
     <div>
-        <div class="img-list" v-infinite-scroll="loadMore"
-             infinite-scroll-disabled="loading"
-             infinite-scroll-distance="10">
-            <div class="img-item" v-for="(item, index) in imglist" :key="index">
-                <img :src="item" />
-            </div>
-            <div class="loading">
-                <mt-spinner type="fading-circle"></mt-spinner>
+        <mt-header fixed title="表情包">
+            <router-link to="/" slot="left">
+                <mt-button icon="back">返回</mt-button>
+            </router-link>
+        </mt-header>
+        <div class="wrapper">
+            <div class="img-list" v-infinite-scroll="loadMore"
+                 infinite-scroll-disabled="loading"
+                 infinite-scroll-distance="10">
+                <div class="img-item" v-for="(item, index) in imglist" :key="index">
+                    <img :src="item" />
+                </div>
+                <div class="loading" v-if="loading">
+                    <mt-spinner type="fading-circle"></mt-spinner>
+                </div>
             </div>
         </div>
     </div>
@@ -29,7 +36,8 @@ export default {
   data () {
     return {
       list: [],
-      imglist: []
+      imglist: [],
+      loading: false
     }
   },
   created () {
@@ -37,21 +45,30 @@ export default {
   },
   methods: {
     loadMore () {
+      this.loading = true
       window.setTimeout(() => {
         this.imglist = [...this.imglist, ...this.list]
-      }, 2000)
+        this.loading = false
+      }, 3000)
     }
   }
 }
 </script>
 <style scoped lang="less">
-    .img-item {
-        img {
-            width: 100%;
+    .img-list {
+        background-color: #f4f4f4;
+        .img-item {
+            padding: 10px;
+            img {
+                width: 100%;
+            }
         }
     }
     .loading {
         padding: 5px/@baseFontSize 0px;
         text-align: center;
+        span {
+            display: inline-block;
+        }
     }
 </style>

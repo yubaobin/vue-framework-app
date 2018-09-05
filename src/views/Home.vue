@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img src="@/assets/logo.png" />
+    <img src="@/assets/logo.jpg" />
     <div class="list">
       <mt-cell title="表情包" to="/emoji" is-link></mt-cell>
       <mt-cell title="二维码" to="/qrcode" is-link></mt-cell>

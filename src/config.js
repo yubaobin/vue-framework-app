@@ -1,11 +1,12 @@
 // 应用具体配置
-const APP_CONFIG = {
+export default {
   appName: 'demo',
   httpHeaders: {
     'Content-Type': 'application/json'
   },
   apiPath: {
-    default: '' // 访问基础路径
+    default: '', // 访问基础路径
+    product: 'http://apis.juhe.cn'
   },
   // req切面配置
   requestInterceptor (req) {
@@ -22,5 +23,3 @@ const APP_CONFIG = {
     console.error('捕获到了错误：' + e)
   }
 }
-
-module.exports = APP_CONFIG
