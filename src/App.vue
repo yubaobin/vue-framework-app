@@ -14,6 +14,9 @@ export default {
   },
   created () {
     this.setTitle()
+    this.api.authWX({}).then((res) => {
+      console.log(res)
+    })
   },
   watch: {
     '$route' () {

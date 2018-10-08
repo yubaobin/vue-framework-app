@@ -4,9 +4,14 @@ export default {
   httpHeaders: {
     'Content-Type': 'application/json'
   },
+  // 微信
+  wx: {
+    appId: 'wx7b3e1075c1ff53d3',
+    secret: 'dc310e4a36b261549f24dcf1cf302987'
+  },
   apiPath: {
-    default: '', // 访问基础路径
-    product: 'http://apis.juhe.cn'
+    default: '/wx',
+    product: 'http://www.ybaob.com/wx'
   },
   // req切面配置
   requestInterceptor (req) {

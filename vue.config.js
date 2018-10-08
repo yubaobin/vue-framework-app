@@ -30,12 +30,12 @@ module.exports = {
     // proxy: 'http://' // 代理
     // or
     proxy: {
-      '/qrcode': {
-        target: 'http://apis.juhe.cn/qrcode',
+      '/wx': {
+        target: 'http://www.ybaob.com/wx',
         ws: true,
         changeOrigin: true,
         pathRewrite: {
-          '^/qrcode': ''
+          '^/wx': ''
         }
       }
     }
