@@ -4,6 +4,16 @@ export default {
   httpHeaders: {
     'Content-Type': 'application/json'
   },
+  // 是否需要一开始就校验权限
+  needGetUserInfoFirst: false,
+  // session有效时间 ms
+  sessionDuration: 30 * 60 * 1000,
+  // 每个路由默认的权限校验状态
+  defaultAuth: false,
+  // 首页路由名称, 用于处理遭遇各种异常路由时的最终跳转路由
+  indexPageName: 'index',
+  // 登录页路由名称
+  loginPageName: 'login',
   // 微信
   wx: {
     appId: 'wx7b3e1075c1ff53d3',
