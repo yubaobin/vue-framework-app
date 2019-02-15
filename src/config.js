@@ -14,11 +14,6 @@ export default {
   indexPageName: 'index',
   // 登录页路由名称
   loginPageName: 'login',
-  // 微信
-  wx: {
-    appId: 'wx7b3e1075c1ff53d3',
-    secret: 'dc310e4a36b261549f24dcf1cf302987'
-  },
   baseURL: {
   },
   apiPath: {
