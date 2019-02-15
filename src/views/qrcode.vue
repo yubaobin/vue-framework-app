@@ -30,7 +30,7 @@
 <script>
 import logo from '../assets/logo.jpg'
 import { Toast, Indicator } from 'mint-ui'
-import VueQrcode from '@xkeshi/vue-qrcode'
+import VueQrcode from '@chenfengyuan/vue-qrcode'
 
 export default {
   data () {
