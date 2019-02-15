@@ -20,13 +20,11 @@ export default {
     secret: 'dc310e4a36b261549f24dcf1cf302987'
   },
   baseURL: {
-    admin: '/xcip-admin-int-war', // 管理后台接口
-    sys: '/xcip-prod-int-war' // 系统接口
   },
   apiPath: {
     development: '', // 开发
-    test: 'http://www.baidu.com', // 测试环境
-    production: 'http://www.bilibili.com' // 生产环境
+    test: '', // 测试环境
+    production: 'http://www.ybaob.com' // 生产环境
   },
   accessToken: 'accessToken',
   // req切面配置
