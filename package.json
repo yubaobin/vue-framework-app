@@ -23,6 +23,7 @@
     "@vue/cli-plugin-eslint": "^3.0.1",
     "@vue/cli-service": "^3.0.1",
     "@vue/eslint-config-standard": "^3.0.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "style-resources-loader": "^1.2.1",

@@ -58,12 +58,5 @@ module.exports = {
     // less
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
     types.forEach(type => addStyleResource(config.module.rule('less').oneOf(type)))
-  },
-  configureWebpack: (config) => {
-    // 压缩时去掉console
-    if (process.env.NODE_ENV === 'production') {
-      config.optimization.minimizer[0].options.uglifyOptions.compress.drop_console = true
-      config.optimization.minimizer[0].options.uglifyOptions.compress.pure_funcs = ['console.log']
-    }
   }
 }
