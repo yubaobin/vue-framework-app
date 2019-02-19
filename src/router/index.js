@@ -7,7 +7,8 @@ const emoji = () => import('@/views/emoji.vue')
 
 Vue.use(Router)
 const router = new Router({
-  mode: 'history',
+  // mode: 'history',
+  // base: `/${process.env.VUE_APP_outputDir}`,
   routes: [{
     path: '/',
     name: 'home',

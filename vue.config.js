@@ -13,8 +13,8 @@ function addStyleResource (rule) {
 }
 
 module.exports = {
-  baseUrl: process.env.baseUrl, // 项目的根路径, 默认: '/' 这个值也可以被设置为空字符串 ('') 或是相对路径 ('./')，这样所有的资源都会被链接为相对路径
-  outputDir: process.env.outputDir, // 生成的环境构建文件的目录 在.env.xx 文件配置
+  baseUrl: process.env.VUE_APP_publicPath, // 项目的根路径, 默认: '/' 这个值也可以被设置为空字符串 ('') 或是相对路径 ('./')，这样所有的资源都会被链接为相对路径
+  outputDir: process.env.VUE_APP_outputDir, // 生成的环境构建文件的目录 在.env.xx 文件配置
   //, assetsDir: '' // 放置生成的静态资源 默认: ''
   filenameHashing: true, // false 来关闭文件名哈希
   //, pages: {} // 多页面配置
