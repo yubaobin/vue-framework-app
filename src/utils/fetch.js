@@ -4,7 +4,6 @@
 import axios from 'axios'
 import config from '@/config'
 import utils from './index'
-const env = process.env.NODE_ENV || 'development'
 
 /* eslint-disable prefer-promise-reject-errors */
 let instance = axios.create({
@@ -40,7 +39,7 @@ export default async (url = '', params = {}, option = {}) => {
   }
   let method = option.method || 'post'
   if (url.indexOf('http') !== 0) {
-    let prefix = config.apiPath[env]
+    let prefix = config.apiPath
     if (typeof prefix === 'string') {
       url = prefix + url
     } else if (typeof prefix === 'object') {

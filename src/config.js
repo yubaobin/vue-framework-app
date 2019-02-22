@@ -16,11 +16,7 @@ export default {
   loginPageName: 'login',
   baseURL: {
   },
-  apiPath: {
-    development: '', // 开发
-    test: '', // 测试环境
-    production: 'http://www.ybaob.com' // 生产环境
-  },
+  apiPath: process.env.VUE_APP_apipath ? process.env.VUE_APP_apipath : '', // 接口服务器路径
   accessToken: 'accessToken',
   // req切面配置
   requestInterceptor (req) {
